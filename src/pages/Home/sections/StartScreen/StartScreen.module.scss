@@ -1,0 +1,65 @@
+@use "../forward" as *;
+
+.offer {
+  min-height: 532px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../../../../assets/img/start-screen.png);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 3px 6px rgba(black, 0.16);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $size-text--base;
+
+  $padding: 20px;
+
+  padding: $padding ($padding / 2);
+  box-sizing: border-box;
+
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(#ffffff, 0.69);
+    filter: blur(25px);
+  }
+}
+
+.title,
+.desc {
+  z-index: 3;
+}
+
+.title {
+  font-size: $size-text--title;
+  color: $color--base;
+  font-family: ptsans-bold, sans-serif;
+  padding: 0;
+  margin: 0;
+
+  filter: drop-shadow(0 0 1px black);
+}
+
+.desc {
+  font-size: $size-text--base;
+  max-width: 540px;
+  padding: 0;
+  margin: 0;
+}

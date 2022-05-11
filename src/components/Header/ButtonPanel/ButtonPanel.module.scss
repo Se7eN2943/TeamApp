@@ -1,0 +1,16 @@
+@use "../../forward" as *;
+
+.wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+
+.btnFill {
+  @include fill-widget;
+}
+.btn {
+  width: 144px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
